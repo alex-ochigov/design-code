@@ -31,10 +31,6 @@ struct CardView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 300, height: 110, alignment: .top)
         }
-        .frame(width: 340, height: 220)
-        .background(Color.black)
-        .cornerRadius(20)
-        .shadow(radius: 20)
     }
 }
 
@@ -43,7 +39,6 @@ struct BackCardView: View {
         VStack {
             Spacer()
         }
-        .frame(width: 340, height: 220)
     }
 }
 
@@ -66,6 +61,5 @@ struct BottomCardView: View {
         .background(Color.white)
         .cornerRadius(30)
         .shadow(radius: 20)
-        .offset(x: 0, y: 550)
     }
 }
