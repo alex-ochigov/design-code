@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1C5DBC24E4213200B0C5F4 /* CertificateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C5DBB24E4213200B0C5F4 /* CertificateScreen.swift */; };
+		FA1C5DBC24E4213200B0C5F4 /* CertificatesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C5DBB24E4213200B0C5F4 /* CertificatesScreen.swift */; };
 		FA1C5DBE24E4217500B0C5F4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C5DBD24E4217500B0C5F4 /* CardView.swift */; };
 		FA1C5DC024E421FE00B0C5F4 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C5DBF24E421FE00B0C5F4 /* TitleView.swift */; };
 		FA5A68A224E3ED5F0002505A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A68A124E3ED5F0002505A /* AppDelegate.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA1C5DBB24E4213200B0C5F4 /* CertificateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateScreen.swift; sourceTree = "<group>"; };
+		FA1C5DBB24E4213200B0C5F4 /* CertificatesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesScreen.swift; sourceTree = "<group>"; };
 		FA1C5DBD24E4217500B0C5F4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FA1C5DBF24E421FE00B0C5F4 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		FA5A689E24E3ED5F0002505A /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 		FA5A68B924E413A30002505A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FA1C5DBB24E4213200B0C5F4 /* CertificateScreen.swift */,
+				FA1C5DBB24E4213200B0C5F4 /* CertificatesScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5A68A224E3ED5F0002505A /* AppDelegate.swift in Sources */,
-				FA1C5DBC24E4213200B0C5F4 /* CertificateScreen.swift in Sources */,
+				FA1C5DBC24E4213200B0C5F4 /* CertificatesScreen.swift in Sources */,
 				FA5A68A424E3ED5F0002505A /* SceneDelegate.swift in Sources */,
 				FA1C5DBE24E4217500B0C5F4 /* CardView.swift in Sources */,
 				FA1C5DC024E421FE00B0C5F4 /* TitleView.swift in Sources */,

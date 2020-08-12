@@ -17,7 +17,7 @@ struct CardView: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                    Text("Certificates")
+                    Text("Certificate")
                         .foregroundColor(Color("accent"))
                 }
                 Spacer()
