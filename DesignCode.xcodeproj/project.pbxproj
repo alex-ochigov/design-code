@@ -24,6 +24,7 @@
 		FA5A68A824E3ED610002505A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68A724E3ED610002505A /* Assets.xcassets */; };
 		FA5A68AB24E3ED610002505A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AA24E3ED610002505A /* Preview Assets.xcassets */; };
 		FA5A68AE24E3ED610002505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AC24E3ED610002505A /* LaunchScreen.storyboard */; };
+		FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD459A424EA7C70008E0CFF /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FA5A68AA24E3ED610002505A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA5A68AD24E3ED610002505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5A68AF24E3ED610002505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD459A424EA7C70008E0CFF /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				FA1C5DBD24E4217500B0C5F4 /* CardView.swift */,
 				FA1C5DBF24E421FE00B0C5F4 /* TitleView.swift */,
 				FA1C5DC124E44B4F00B0C5F4 /* MenuView.swift */,
+				FAD459A424EA7C70008E0CFF /* RingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */,
 				FA4A08F324E4A3B700AE06CE /* Update.swift in Sources */,
 				FA5A68A224E3ED5F0002505A /* AppDelegate.swift in Sources */,
 				FA1C5DC224E44B4F00B0C5F4 /* MenuView.swift in Sources */,
