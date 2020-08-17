@@ -24,6 +24,7 @@
 		FA5A68A824E3ED610002505A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68A724E3ED610002505A /* Assets.xcassets */; };
 		FA5A68AB24E3ED610002505A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AA24E3ED610002505A /* Preview Assets.xcassets */; };
 		FA5A68AE24E3ED610002505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AC24E3ED610002505A /* LaunchScreen.storyboard */; };
+		FACEA85724EA9B9500CA5D1F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85624EA9B9500CA5D1F /* Modifiers.swift */; };
 		FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD459A424EA7C70008E0CFF /* RingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		FA5A68AA24E3ED610002505A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA5A68AD24E3ED610002505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5A68AF24E3ED610002505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACEA85624EA9B9500CA5D1F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		FAD459A424EA7C70008E0CFF /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 			children = (
 				FA5A68B824E413980002505A /* Components */,
 				FA5A68B924E413A30002505A /* Screens */,
+				FACEA85524EA9A8900CA5D1F /* Utils */,
 				FA4A08F824E4B92400AE06CE /* RootView.swift */,
 			);
 			path = UI;
@@ -165,6 +168,14 @@
 				FA4A08F624E4A9C700AE06CE /* UpdateDetailScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		FACEA85524EA9A8900CA5D1F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FACEA85624EA9B9500CA5D1F /* Modifiers.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				FA5A68A424E3ED5F0002505A /* SceneDelegate.swift in Sources */,
 				FA1C5DC924E48E9A00B0C5F4 /* Section.swift in Sources */,
 				FA1C5DBE24E4217500B0C5F4 /* CardView.swift in Sources */,
+				FACEA85724EA9B9500CA5D1F /* Modifiers.swift in Sources */,
 				FA1C5DC024E421FE00B0C5F4 /* TitleView.swift in Sources */,
 				FA4A08F524E4A3D600AE06CE /* UpdateViewModel.swift in Sources */,
 				FA4A08F724E4A9C700AE06CE /* UpdateDetailScreen.swift in Sources */,

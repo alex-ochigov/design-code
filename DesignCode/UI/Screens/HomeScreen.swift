@@ -32,21 +32,30 @@ struct HomeScreen: View {
                 .padding(.leading, 14)
                 .padding(.top, 30)
                 
-                HStack(spacing: 12) {
-                    RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), colorTo: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 69)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("6 minute left")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        Text("watched 10 minutes today")
-                            .font(.caption)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 30) {
+                        CardShadowView {
+                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), colorTo: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 69)
+                            VStack(alignment: .leading, spacing: 4) {
+                                 Text("6 minute left")
+                                     .font(.subheadline)
+                                     .fontWeight(.bold)
+                                 Text("watched 10 minutes today")
+                                     .font(.caption)
+                             }
+                        }
+
+                        CardShadowView {
+                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), colorTo: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 48)
+                        }
+                        
+                        CardShadowView {
+                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), colorTo: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), width: 32, height: 32, percent: 25)
+                        }
                     }
+                    .padding(30)
+                    .padding(.bottom, 30)
                 }
-                .padding(8)
-                .background(Color.white)
-                .cornerRadius(20)
-                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -144,6 +153,25 @@ struct BellButtonView: View {
         .sheet(isPresented: $showUpdate) {
             UpdateListScreen()
         }
+    }
+}
+
+struct CardShadowView<Content: View>: View {
+    let content: Content
+    
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            content
+        }
+        .padding(8)
+        .background(Color.white)
+        .cornerRadius(20)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
+        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
     }
 }
 
