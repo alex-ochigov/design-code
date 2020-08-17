@@ -43,6 +43,8 @@ struct BackCardView: View {
 }
 
 struct BottomCardView: View {
+    @Binding public var show: Bool
+
     var body: some View {
         VStack(spacing: 20) {
             Rectangle()
@@ -53,6 +55,24 @@ struct BottomCardView: View {
                 .font(.subheadline)
                 .lineSpacing(4)
                 .multilineTextAlignment(.center)
+            HStack(spacing: 20) {
+                RingView(show: $show, colorFrom: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), colorTo: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), width: 88, height: 88, percent: 75)
+                    .animation(Animation.easeInOut.delay(0.3))
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("SwiftUI")
+                        .fontWeight(.bold)
+                    Text("12 of 12 sections completed\n10 hours so far")
+                        .font(.footnote)
+                        .lineSpacing(4)
+                        .foregroundColor(.gray)
+                }
+                .padding(20)
+                .background(Color.white)
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+            }
+
             Spacer()
         }
         .padding(.top, 8)

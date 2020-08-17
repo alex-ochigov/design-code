@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RingView: View {
-    private var defaultSize: CGFloat = 44
+    @Binding public var show: Bool
     
     public var colorFrom = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     public var colorTo = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
@@ -18,6 +18,7 @@ struct RingView: View {
     public var percent: CGFloat = 88
     
     var body: some View {
+        let defaultSize: CGFloat = 44
         let multiplier = width / defaultSize
         let progress = 1 - (percent / 100)
         
@@ -27,7 +28,7 @@ struct RingView: View {
                 .frame(width: width, height: height)
 
             Circle()
-                .trim(from: progress, to: 1)
+                .trim(from: show ? progress : 1, to: 1)
                 .stroke(
                     LinearGradient(gradient: Gradient(colors: [Color(colorFrom), Color(colorTo)]), startPoint: .topTrailing, endPoint: .bottomLeading),
                     style: StrokeStyle(
@@ -48,11 +49,5 @@ struct RingView: View {
                 .font(.system(size: 14 * multiplier))
                 .fontWeight(.bold)
         }
-    }
-}
-
-struct RingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RingView()
     }
 }
