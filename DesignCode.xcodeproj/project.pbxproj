@@ -26,6 +26,7 @@
 		FA5A68AE24E3ED610002505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AC24E3ED610002505A /* LaunchScreen.storyboard */; };
 		FACEA85724EA9B9500CA5D1F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85624EA9B9500CA5D1F /* Modifiers.swift */; };
 		FACEA85924EC19A600CA5D1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85824EC19A600CA5D1F /* Constants.swift */; };
+		FACEA85B24EC28AE00CA5D1F /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85A24EC28AE00CA5D1F /* CourseList.swift */; };
 		FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD459A424EA7C70008E0CFF /* RingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		FA5A68AF24E3ED610002505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACEA85624EA9B9500CA5D1F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		FACEA85824EC19A600CA5D1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FACEA85A24EC28AE00CA5D1F /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		FAD459A424EA7C70008E0CFF /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				FA1C5DBF24E421FE00B0C5F4 /* TitleView.swift */,
 				FA1C5DC124E44B4F00B0C5F4 /* MenuView.swift */,
 				FAD459A424EA7C70008E0CFF /* RingView.swift */,
+				FACEA85A24EC28AE00CA5D1F /* CourseList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				FA1C5DBC24E4213200B0C5F4 /* CertificatesScreen.swift in Sources */,
 				FA1C5DCC24E4952A00B0C5F4 /* SectionViewModel.swift in Sources */,
 				FA4A08F124E4A2EF00AE06CE /* UpdateListScreen.swift in Sources */,
+				FACEA85B24EC28AE00CA5D1F /* CourseList.swift in Sources */,
 				FA5A68A424E3ED5F0002505A /* SceneDelegate.swift in Sources */,
 				FA1C5DC924E48E9A00B0C5F4 /* Section.swift in Sources */,
 				FA1C5DBE24E4217500B0C5F4 /* CardView.swift in Sources */,
