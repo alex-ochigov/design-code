@@ -13,71 +13,108 @@ struct HomeScreen: View {
     @State private var showProfile = false
     @State private var viewState: CGSize = .zero
     @State private var showUpdate = false
+    @State private var showContent = false
     
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                HStack {
-                    Text("Watching")
-                        .font(.system(size: 28, weight: .bold))
+                ScrollView {
+                    HStack(spacing: 12) {
+                        Text("Watching")
+                            .font(.system(size: 28, weight: .bold))
+                        
+                        Spacer()
+                        AvatarView(showProfile: $showProfile)
+                        BellButtonView(showUpdate: $showUpdate)
+                    }
+                    .padding(.horizontal)
+                    .padding(.leading, 14)
+                    .padding(.top, 30)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 30) {
+                            CardShadowView {
+                                RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), colorTo: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 69)
+                                VStack(alignment: .leading, spacing: 4) {
+                                     Text("6 minute left")
+                                         .font(.subheadline)
+                                         .fontWeight(.bold)
+                                     Text("watched 10 minutes today")
+                                         .font(.caption)
+                                 }
+                            }
+
+                            CardShadowView {
+                                RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), colorTo: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 48)
+                            }
+                            
+                            CardShadowView {
+                                RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), colorTo: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), width: 32, height: 32, percent: 25)
+                            }
+                        }
+                        .onTapGesture { self.showContent.toggle() }
+                        .padding(30)
+                        .padding(.bottom, 30)
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(viewModel.section) { section in
+                                GeometryReader { geometry in
+                                    SectionView(section: section)
+                                        .rotation3DEffect(.degrees(Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10.0, z: 0))
+                                }
+                                .frame(width: 275, height: 275)
+                            }
+                        }
+                        .padding(30)
+                        .padding(.bottom, 30)
+                    }
+                    .offset(y: -30)
+                    
+                    HStack {
+                        Text("Courses")
+                            .font(.title).bold()
+                        Spacer()
+                    }
+                    .padding(.leading, 30)
+                    .offset(y: -60)
+                    
+                    SectionView(section: viewModel.section[2], width: screen.width - 60, height: 275)
+                        .offset(y: -60)
                     
                     Spacer()
-                    AvatarView(showProfile: $showProfile)
-                    BellButtonView(showUpdate: $showUpdate)
                 }
-                .padding(.horizontal)
-                .padding(.leading, 14)
-                .padding(.top, 30)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 30) {
-                        CardShadowView {
-                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), colorTo: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 69)
-                            VStack(alignment: .leading, spacing: 4) {
-                                 Text("6 minute left")
-                                     .font(.subheadline)
-                                     .fontWeight(.bold)
-                                 Text("watched 10 minutes today")
-                                     .font(.caption)
-                             }
-                        }
+                .modifier(HomeScreenStyles(showProfile: $showProfile))
 
-                        CardShadowView {
-                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), colorTo: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 48)
-                        }
-                        
-                        CardShadowView {
-                            RingView(show: .constant(true), colorFrom: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), colorTo: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), width: 32, height: 32, percent: 25)
-                        }
-                    }
-                    .padding(30)
-                    .padding(.bottom, 30)
-                }
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(viewModel.section) { section in
-                            GeometryReader { geometry in
-                                SectionView(section: section)
-                                    .rotation3DEffect(.degrees(Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10.0, z: 0))
-                            }
-                            .frame(width: 275, height: 275)
-                        }
-                    }
-                    .padding(30)
-                    .padding(.bottom, 30)
-                }
-                Spacer()
-            }
-            .modifier(HomeScreenStyles(showProfile: $showProfile))
             
             MenuView()
                 .modifier(MenuViewStyles(showProfile: $showProfile, viewState: $viewState))
                 .onTapGesture { self.showProfile.toggle() }
                 .gesture(dragGesture())
+            
+            if showContent {
+                Color.white.edgesIgnoringSafeArea(.all)
+                CertificatesScreen()
+                VStack {
+                    HStack {
+                        Spacer()
+                        
+                        Image(systemName: "xmark")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(Color.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }
+                    Spacer()
+                }
+                .onTapGesture { self.showContent = false }
+                .offset(x: -16, y: 16)
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+            }
         }
     }
     
@@ -109,6 +146,8 @@ struct AvatarView: View {
 
 struct SectionView: View {
     var section: Section
+    var width: CGFloat = 275
+    var height: CGFloat = 275
 
     var body: some View {
         VStack {
@@ -129,7 +168,7 @@ struct SectionView: View {
         }
         .padding(.top, 20)
         .padding(.horizontal, 20)
-        .frame(width: 275, height: 275)
+        .frame(width: width, height: height)
         .background(section.color)
         .cornerRadius(30)
         .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
@@ -181,7 +220,14 @@ fileprivate struct HomeScreenStyles: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(.top, 44)
-            .background(Color.white)
+            .background(
+                VStack {
+                    LinearGradient(gradient: Gradient(colors: [Color("background2"), Color.white]), startPoint: .top, endPoint: .bottom)
+                        .frame(height: 200)
+                    Spacer()
+                }
+                .background(Color.white)
+            )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .offset(y: showProfile ? -450 : 0)
@@ -199,7 +245,7 @@ fileprivate struct MenuViewStyles: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(Color.black.opacity(0.001))
-            .offset(y: showProfile ? 0 : 1000)
+            .offset(y: showProfile ? 0 : screen.height)
             .offset(y: viewState.height)
             .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
     }

@@ -25,6 +25,7 @@
 		FA5A68AB24E3ED610002505A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AA24E3ED610002505A /* Preview Assets.xcassets */; };
 		FA5A68AE24E3ED610002505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5A68AC24E3ED610002505A /* LaunchScreen.storyboard */; };
 		FACEA85724EA9B9500CA5D1F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85624EA9B9500CA5D1F /* Modifiers.swift */; };
+		FACEA85924EC19A600CA5D1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85824EC19A600CA5D1F /* Constants.swift */; };
 		FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD459A424EA7C70008E0CFF /* RingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		FA5A68AD24E3ED610002505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5A68AF24E3ED610002505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACEA85624EA9B9500CA5D1F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		FACEA85824EC19A600CA5D1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAD459A424EA7C70008E0CFF /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FACEA85624EA9B9500CA5D1F /* Modifiers.swift */,
+				FACEA85824EC19A600CA5D1F /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */,
+				FACEA85924EC19A600CA5D1F /* Constants.swift in Sources */,
 				FA4A08F324E4A3B700AE06CE /* Update.swift in Sources */,
 				FA5A68A224E3ED5F0002505A /* AppDelegate.swift in Sources */,
 				FA1C5DC224E44B4F00B0C5F4 /* MenuView.swift in Sources */,
