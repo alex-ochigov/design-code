@@ -30,6 +30,10 @@
 		FACEA85D24EC4A0E00CA5D1F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85C24EC4A0E00CA5D1F /* Course.swift */; };
 		FACEA85F24EC4A3600CA5D1F /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA85E24EC4A3600CA5D1F /* CourseViewModel.swift */; };
 		FACEA86124EDA50D00CA5D1F /* CourseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA86024EDA50D00CA5D1F /* CourseItemView.swift */; };
+		FACEA86524EDD25800CA5D1F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA86424EDD25800CA5D1F /* Post.swift */; };
+		FACEA86824EDDAE300CA5D1F /* JSONPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA86724EDDAE300CA5D1F /* JSONPlaceholderService.swift */; };
+		FACEA86B24EDDD9300CA5D1F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA86A24EDDD9300CA5D1F /* APIClient.swift */; };
+		FACEA86D24EDE38600CA5D1F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEA86C24EDE38600CA5D1F /* PostViewModel.swift */; };
 		FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD459A424EA7C70008E0CFF /* RingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		FACEA85C24EC4A0E00CA5D1F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FACEA85E24EC4A3600CA5D1F /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		FACEA86024EDA50D00CA5D1F /* CourseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemView.swift; sourceTree = "<group>"; };
+		FACEA86424EDD25800CA5D1F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FACEA86724EDDAE300CA5D1F /* JSONPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderService.swift; sourceTree = "<group>"; };
+		FACEA86A24EDDD9300CA5D1F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FACEA86C24EDE38600CA5D1F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		FAD459A424EA7C70008E0CFF /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +87,7 @@
 				FA1C5DC824E48E9A00B0C5F4 /* Section.swift */,
 				FA4A08F224E4A3B700AE06CE /* Update.swift */,
 				FACEA85C24EC4A0E00CA5D1F /* Course.swift */,
+				FACEA86424EDD25800CA5D1F /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -89,6 +98,7 @@
 				FA1C5DCB24E4952A00B0C5F4 /* SectionViewModel.swift */,
 				FA4A08F424E4A3D600AE06CE /* UpdateViewModel.swift */,
 				FACEA85E24EC4A3600CA5D1F /* CourseViewModel.swift */,
+				FACEA86C24EDE38600CA5D1F /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,10 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				FA1C5DC724E48E8B00B0C5F4 /* Models */,
-				FA1C5DCA24E4949F00B0C5F4 /* ViewModel */,
-				FA5A68B724E4138D0002505A /* UI */,
+				FACEA86924EDDD4000CA5D1F /* Network */,
 				FA5A68B624E3EDCD0002505A /* Resources */,
+				FACEA86624EDDAC000CA5D1F /* Services */,
 				FA5A68B524E3ED9A0002505A /* System */,
+				FA5A68B724E4138D0002505A /* UI */,
+				FA1C5DCA24E4949F00B0C5F4 /* ViewModel */,
 				FA5A68AC24E3ED610002505A /* LaunchScreen.storyboard */,
 			);
 			path = DesignCode;
@@ -153,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				FA5A68B824E413980002505A /* Components */,
+				FA4A08F824E4B92400AE06CE /* RootView.swift */,
 				FA5A68B924E413A30002505A /* Screens */,
 				FACEA85524EA9A8900CA5D1F /* Utils */,
-				FA4A08F824E4B92400AE06CE /* RootView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -191,6 +203,22 @@
 				FACEA85824EC19A600CA5D1F /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FACEA86624EDDAC000CA5D1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FACEA86724EDDAE300CA5D1F /* JSONPlaceholderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FACEA86924EDDD4000CA5D1F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FACEA86A24EDDD9300CA5D1F /* APIClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACEA86D24EDE38600CA5D1F /* PostViewModel.swift in Sources */,
 				FACEA86124EDA50D00CA5D1F /* CourseItemView.swift in Sources */,
+				FACEA86824EDDAE300CA5D1F /* JSONPlaceholderService.swift in Sources */,
+				FACEA86524EDD25800CA5D1F /* Post.swift in Sources */,
 				FAD459A524EA7C70008E0CFF /* RingView.swift in Sources */,
 				FACEA85924EC19A600CA5D1F /* Constants.swift in Sources */,
 				FA4A08F324E4A3B700AE06CE /* Update.swift in Sources */,
@@ -273,6 +304,7 @@
 				FA1C5DC424E455DA00B0C5F4 /* HomeScreen.swift in Sources */,
 				FA4A08F924E4B92400AE06CE /* RootView.swift in Sources */,
 				FA1C5DBC24E4213200B0C5F4 /* CertificatesScreen.swift in Sources */,
+				FACEA86B24EDDD9300CA5D1F /* APIClient.swift in Sources */,
 				FA1C5DCC24E4952A00B0C5F4 /* SectionViewModel.swift in Sources */,
 				FA4A08F124E4A2EF00AE06CE /* UpdateListScreen.swift in Sources */,
 				FACEA85B24EC28AE00CA5D1F /* CourseListView.swift in Sources */,

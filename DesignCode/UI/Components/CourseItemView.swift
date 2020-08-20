@@ -76,12 +76,14 @@ struct CourseItemView: View {
             .background(Color(course.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+            .gesture(closeOnDrag())
             .gesture(closeOnTap())
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.gestureDragOffset.height / 1000)
         .rotation3DEffect(.degrees(Double(self.gestureDragOffset.height / 10)), axis: (x: 0, y: 10, z: 0))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+        .gesture(closeOnDrag())
         .edgesIgnoringSafeArea(.all)
     }
     

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     @ObservedObject var viewModel = SectionViewModel.createWithData()
+    @ObservedObject var postsViewModel = PostViewMode()
     @State private var showProfile = false
     @State private var viewState: CGSize = .zero
     @State private var showUpdate = false
